@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Slurry_Mixing_Calculator</title>
@@ -42,7 +40,7 @@
       padding: 0;
     }
     body {
-      font-family: "Arial", sans-serif;
+      font-family: system-ui, -apple-system, sans-serif;
     }
 
     /* Table layout: keep original width but make it responsive */
@@ -69,10 +67,11 @@
     /* Inputs: same width, inset from borders, mobile-friendly */
     td input.input-cell {
       display: block;
-      margin: 0 auto;
+      background-color: yellow;
+      margin: 0.5pt 0.5pt;
       text-align: center;
-      width: 96%;          /* inset so the white area does not cover the black frame */
-      box-sizing: border-box;
+      width: 85%;          /* inset so the white area does not cover the black frame */
+    /*  box-sizing: border-box; */
       font-variant-numeric: tabular-nums; /* align digits/decimals vertically without changing font family */
     }
 
@@ -109,11 +108,11 @@
 
   <!-- xxxxxxxxxxxxxxxxxxxxxxx START OF NEW CODE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-  <div align="center" class="calculator-container">
+  <div align="center" class="calculator-container" style="margin-top: 0px;">
     <table border="0" cellspacing="0" cellpadding="0" width="404" style="width:303.0pt;border-collapse:collapse;height:10pt">
       <tbody>
         <tr style="height:10pt">
-          <td width="404" nowrap colspan="2" style="width:303.0pt;border:solid black 1.0pt;background:#BAE18F;padding:0 2pt;height:10pt">
+          <td width="404" nowrap="" colspan="2" style="width:303.0pt;border:solid black 1.0pt;background:#BAE18F;padding:0 2pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-size:12.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">Slurry Calculations For Glazes &amp; Casting Slips</span></b>
             </p>
@@ -121,48 +120,53 @@
         </tr>
 
         <tr style="height:10pt">
-          <td width="404" nowrap colspan="2" style="width:303.0pt;border:solid black 1.0pt;border-top:none;background:#BAE18F;padding:0 2pt;height:10.0pt">
+          <td width="404" nowrap="" colspan="2" style="width:303.0pt;border:solid black 1.0pt;border-top:none;background:#BAE18F;padding:0 2pt;height:10.0pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Edit Numbers in Yellow Cells - KILOS</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B3 — INPUT CELL -->
+        <!-- B3 â€” INPUT CELL -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">&nbsp;Powder Density&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( For Calculations A , B , C )</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0 2pt;height:10pt">
-            <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
+          <td width="49" nowrap="" style="width:100pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 0pt 0cm 0pt;height:10pt">
+            <!-- <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal"> -->
               <span style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black">
-                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B3" value="2.613" oninput="calc()">
+                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B3" value="2.613" oninput="calc()" style="
+    margin-top: 1px;
+    margin-bottom: 1px;
+">
               </span>
-            </p>
+            <p></p>
           </td>
         </tr>
 
-        <!-- B4 — INPUT CELL … B5? -->
+        <!-- B4 â€” INPUT CELL â€¦ B5? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <b><span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Target Litre Weight ( For Calculations A , B , C )</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
-            <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 0pt 0cm 0pt;height:10pt">
+            <!-- <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal"> -->
               <span style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black">
-                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B5" value="1.800" oninput="calc()">
+                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B5" value="1.800" oninput="calc()" style="
+    margin-top: 1px;
+">
               </span>
-            </p>
+            <p></p>
           </td>
         </tr>
 
         <!-- Calculation A -->
         <tr style="height:15.0pt">
-          <td width="404" nowrap colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F0B64E;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt">
+          <td width="404" nowrap="" colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F0B64E;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Calculation A</span></b>
             </p>
@@ -171,317 +175,329 @@
 
         <!-- Water Needed For Given Powder Weight -->
         <tr style="height:15.0pt">
-          <td width="404" nowrap colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F2A068;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
+          <td width="404" nowrap="" colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F2A068;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Water Needed For Given Powder Weight</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B7 — INPUT CELL … B8? -->
+        <!-- B7 â€” INPUT CELL â€¦ B8? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <b><span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Kilos of POWDER Already Weighed</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 0pt 0cm 0pt;height:10pt">
             <span style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black">
-              <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B8" value="1.296" oninput="calc()">
+              <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B8" value="1.296" oninput="calc()" style="
+    margin-top: 1px;
+    margin-bottom: 1px;
+">
             </span>
           </td>
         </tr>
 
-        <!-- B8 — OUTPUT CELL … B9? -->
+        <!-- B8 â€” OUTPUT CELL â€¦ B9? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">&nbsp;Kilos of WATER to Weigh &amp; Mix</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span id="B9" class="output-cell" style="font-size:10.0pt;font-family:'Arial',sans-serif;color:black;font-weight:bold;">0.504</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B9 — OUTPUT CELL … B10 -->
+        <!-- B9 â€” OUTPUT CELL â€¦ B10 -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Litres of Casting Slip or Glaze</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B10" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">1.000</span>
             </p>
           </td>
         </tr>
 
-        <!-- B10 — Calculation B -->
+        <!-- B10 â€” Calculation B -->
         <tr style="height:15.0pt">
-          <td width="404" nowrap colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F0B64E;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
+          <td width="404" nowrap="" colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F0B64E;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Calculation B</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B11 — Water & Powder Needed For Given Volume -->
+        <!-- B11 â€” Water & Powder Needed For Given Volume -->
         <tr style="height:15.0pt">
-          <td width="404" nowrap colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F2A068;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
+          <td width="404" nowrap="" colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F2A068;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-family:&quot;Arial&quot;,sans-serif;color:black">Water &amp; Powder Needed For Given Volume</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B12 — INPUT CELL … B13 -->
+        <!-- B12 â€” INPUT CELL â€¦ B13 -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <b><span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Litres Of Casting Slip/Glaze Required</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
-            <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 0pt 0cm 0pt;height:10pt">
+            <!-- <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal"> -->
               <span style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black">
-                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B13" value="10.000" oninput="calc()">
+                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B13" value="10.000" oninput="calc()" style="
+    margin-top: 1px;
+    margin-bottom: 1px;
+">
               </span>
-            </p>
+            <p></p>
           </td>
         </tr>
 
-        <!-- B13 — OUTPUT CELL … B14 -->
+        <!-- B13 â€” OUTPUT CELL â€¦ B14 -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">&nbsp; Kilos of POWDER to Weigh &amp; Mix</span></b>
+              <b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">&nbsp;Kilos of POWDER to Weigh &amp; Mix</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span id="B14" class="output-cell" style="font-size:10.0pt;font-family:'Arial',sans-serif;color:black;font-weight:bold;">12.960</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B14 — OUTPUT CELL … B15 -->
+        <!-- B14 â€” OUTPUT CELL â€¦ B15 -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">&nbsp;Kilos of WATER to Weigh &amp; Mix</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span id="B15" class="output-cell" style="font-size:10.0pt;font-family:'Arial',sans-serif;color:black;font-weight:bold;">5.040</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B15 — Calculation C -->
+        <!-- B15 â€” Calculation C -->
         <tr style="height:15.0pt">
-          <td width="404" nowrap colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F0B64E;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
+          <td width="404" nowrap="" colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F0B64E;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-family:&quot;Arial&quot;,sans-serif;color:black"> Calculation C</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B16 — Calculation For NEW Target Litre Weight -->
+        <!-- B16 â€” Calculation For NEW Target Litre Weight -->
         <tr style="height:15.0pt">
-          <td width="404" nowrap colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F2A068;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
+          <td width="404" nowrap="" colspan="2" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F2A068;padding:0cm 5.4pt 0cm 5.4pt;height:10.0pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-family:&quot;Arial&quot;,sans-serif;color:black"> Calculation For NEW Target Litre Weight</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B17 — INPUT CELL … B18? -->
+        <!-- B17 â€” INPUT CELL â€¦ B18? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <b><span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp; Kilos of Casting Slip or Glaze</span></b>
+              <b><span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Kilos of Casting Slip or Glaze</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
-            <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 0pt 0cm 0pt;height:10pt">
+            <!-- <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal"> -->
               <span style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black">
-                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B18" value="10.000" oninput="calc()">
+                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B18" value="10.000" oninput="calc()" style="
+    margin-bottom: 1px;
+    margin-top: 1px;
+">
               </span>
-            </p>
+            <p></p>
           </td>
         </tr>
 
-        <!-- B18 — INPUT CELL … B19? -->
+        <!-- B18 â€” INPUT CELL â€¦ B19? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <b><span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp; Litre Weight Measured</span></b>
+              <b><span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Litre Weight Measured</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
-            <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:yellow;padding:0cm 0pt 0cm 0pt;height:10pt">
+            <!-- <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal"> -->
               <span style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black">
-                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B19" value="1.700" oninput="calc()">
+                <input type="text" inputmode="decimal" class="input-cell comma-convert" id="B19" value="1.700" oninput="calc()" style="
+    margin-bottom: 1px;
+    margin-top: 1px;
+">
               </span>
-            </p>
+            <p></p>
           </td>
         </tr>
 
-        <!-- B19 — OUTPUT CELL … B21? -->
+        <!-- B19 â€” OUTPUT CELL â€¦ B21? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">&nbsp;Water to Add or Remove</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span id="B21" class="output-cell" style="font-size:10.0pt;font-family:'Arial',sans-serif;color:red;font-weight:bold;">-0.735</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B20 — OUTPUT CELL … B22? -->
+        <!-- B20 â€” OUTPUT CELL â€¦ B22? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp; Total Weight of Powder in Slurry</span>
+              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Total Weight of Powder in Slurry</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B22" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">6.670</span>
             </p>
           </td>
         </tr>
 
-        <!-- B21 — OUTPUT CELL … B23? -->
+        <!-- B21 â€” OUTPUT CELL â€¦ B23? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp; Total Weight of Water in Slurry</span>
+              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Total Weight of Water in Slurry</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B23" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">2.594</span>
             </p>
           </td>
         </tr>
 
-        <!-- B22 — OUTPUT CELL … B24? -->
+        <!-- B22 â€” OUTPUT CELL â€¦ B24? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp; Total Weight of Powder + Water in Slurry</span>
+              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Total Weight of Powder + Water in Slurry</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B24" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">9.265</span>
             </p>
           </td>
         </tr>
 
-        <!-- B23 — OUTPUT CELL … B25? -->
+        <!-- B23 â€” OUTPUT CELL â€¦ B25? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp; Litres of Casting Slip or Glaze</span>
+              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Litres of Casting Slip or Glaze</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B25" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">5.147</span>
             </p>
           </td>
         </tr>
 
-        <!-- B24 — EMPTY LINE -->
+        <!-- B24 â€” EMPTY LINE -->
         <tr style="height:2.25pt">
-          <td width="404" nowrap colspan="2" valign="bottom" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F0B64E;padding:0cm 5.4pt 0cm 5.4pt;height:2.25pt">
+          <td width="404" nowrap="" colspan="2" valign="bottom" style="width:303.0pt;border:solid #111111 1.0pt;border-top:none;background:#F0B64E;padding:0cm 5.4pt 0cm 5.4pt;height:2.25pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;</span>
             </p>
           </td>
         </tr>
 
-        <!-- B25 — OUTPUT CELL … B27? -->
+        <!-- B25 â€” OUTPUT CELL â€¦ B27? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">&nbsp;Powder to Add or Remove</span></b>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#00FF2B;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <b><span id="B27" class="output-cell" style="font-size:10.0pt;font-family:'Arial',sans-serif;color:black;font-weight:bold;">1.891</span></b>
             </p>
           </td>
         </tr>
 
-        <!-- B26 — OUTPUT CELL … B28? -->
+        <!-- B26 â€” OUTPUT CELL â€¦ B28? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black"> &nbsp;Total Weight of Powder in Slurry</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B28" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">8.561</span>
             </p>
           </td>
         </tr>
 
-        <!-- B27 — OUTPUT CELL … B29? -->
+        <!-- B27 â€” OUTPUT CELL â€¦ B29? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
               <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Total Weight of Water in Slurry</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B29" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">3.330</span>
             </p>
           </td>
         </tr>
 
-        <!-- B28 — OUTPUT CELL … B30? -->
+        <!-- B28 â€” OUTPUT CELL â€¦ B30? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp; Total Weight of Powder + Water in Slurry</span>
+              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Total Weight of Powder + Water in Slurry</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B30" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">11.891</span>
             </p>
           </td>
         </tr>
 
-        <!-- B29 — OUTPUT CELL … B31? -->
+        <!-- B29 â€” OUTPUT CELL â€¦ B31? -->
         <tr style="height:10pt">
-          <td width="355" nowrap style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="355" nowrap="" style="width:266.05pt;border:solid #111111 1.0pt;border-top:none;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p style="margin-bottom:0cm;line-height:normal">
-              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp; Litres of Casting Slip or Glaze</span>
+              <span style="font-size:10.0pt;font-family:&quot;Liberation Sans&quot;,sans-serif;color:black">&nbsp;Litres of Casting Slip or Glaze</span>
             </p>
           </td>
-          <td width="49" nowrap style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
+          <td width="49" nowrap="" style="width:36.95pt;border-top:none;border-left:none;border-bottom:solid #111111 1.0pt;border-right:solid #111111 1.0pt;background:#99FEFF;padding:0cm 5.4pt 0cm 5.4pt;height:10pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
               <span id="B31" class="output-cell" style="font-size:10.0pt;font-family:'Liberation Sans',sans-serif;color:black;">6.606</span>
             </p>
           </td>
         </tr>
 
-        <!-- B30 — FOOTER -->
+        <!-- B30 â€” FOOTER -->
         <tr style="height:45.75pt">
           <td width="404" colspan="2" style="width:303.0pt;border:solid black 1.0pt;border-top:none;background:#E2EFD9;padding:0cm 5.4pt 0cm 5.4pt;height:45.75pt">
             <p align="center" style="margin-bottom:0cm;text-align:center;line-height:normal">
@@ -491,7 +507,7 @@
                 </a>
               </span>
               <span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black;text-decoration:none">
-                <br>Grad.I.Ceram … IoM3<br>WhatsApp: +46 739 315 028
+                <br>Grad.I.Ceram â€¦ IoM3<br>WhatsApp: +46 739 315 028
               </span>
             </p>
           </td>
@@ -510,9 +526,7 @@
   </div>
 
   <!-- Version number -->
-  <div id="appVersion" style="text-align:center; font-size:0.8rem; color:#666; margin-top:10px;">
-    Version …
-  </div>
+  <div id="appVersion" style="text-align:center; font-size:0.8rem; color:#666; margin-top:10px;">Version (no SW)</div>
 
   <script>
   // Global keydown handler for comma-to-dot conversion
@@ -702,7 +716,8 @@
     box-shadow:0 2px 6px rgba(0,0,0,0.3);
     z-index:99999;
   ">
-    Checking for updates…
+    Checking for updatesâ€¦
   </div>
-</body>
-</html>
+
+
+</body></html>
