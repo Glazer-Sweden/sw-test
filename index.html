@@ -94,6 +94,10 @@
     /*    (Styles for reusable UI components like buttons, specific table cells) */
     /* -------------------------------------- */
 
+    .negative {
+    color: red;
+     }
+	  
     /* Styles for the transfer button */
     .transfer-button {
         float: center; /* Note: 'center' is not a valid value for float. Use margin: 0 auto; with display: block; or flexbox/grid for centering. */
@@ -739,6 +743,22 @@
 
   <script>
 
+  <!--
+Source - https://stackoverflow.com/a/68863075
+Posted by Michael Larsson
+Retrieved 2026-03-06, License - CC BY-SA 4.0
+-->
+
+function MakeNegative() {
+    TDs = document.getElementsByTagName('td');
+    for (var i=0; i<TDs.length; i++) {
+            var temp = TDs[i];
+            if (temp.firstChild.nodeValue.indexOf('-') == 0) temp.className = "negative";
+        }
+}
+
+MakeNegative();
+
   // Global keydown handler for comma-to-dot conversion
   document.addEventListener('keydown', function (e) {
     if (e.target && e.target.classList.contains('comma-convert')) {
@@ -1078,4 +1098,5 @@ document.querySelectorAll('label[for]').forEach(label => {
 		</script>
 	</body>
 </html>
+
 
