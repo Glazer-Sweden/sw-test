@@ -758,14 +758,6 @@ Posted by Michael Larsson
 Retrieved 2026-03-06, License - CC BY-SA 4.0
 -->
 
-<-- function MakeNegative() {
-    TDs = document.getElementsByTagName('td');
-    for (var i=0; i<TDs.length; i++) {
-            var temp = TDs[i];
-            if (temp.firstChild.nodeValue.indexOf('-') == 0) temp.className = "negative";
-        }
-}
-
 MakeNegative(); -->
 
   // Global keydown handler for comma-to-dot conversion
@@ -1038,6 +1030,15 @@ document.querySelectorAll('label[for]').forEach(label => {
       location.reload(true);
     }
   }
+
+  <-- function MakeNegative() {
+    TDs = document.getElementsByTagName('td');
+    for (var i=0; i<TDs.length; i++) {
+            var temp = TDs[i];
+            if (temp.firstChild.nodeValue.indexOf('-') == 0) temp.className = "negative";
+        }
+  }
+	  
   </script>
 
   <script>
@@ -1107,6 +1108,7 @@ document.querySelectorAll('label[for]').forEach(label => {
 		</script>
 	</body>
 </html>
+
 
 
 
