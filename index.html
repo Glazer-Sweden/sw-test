@@ -224,6 +224,9 @@
         text-align: end;
         font-variant-numeric: tabular-nums;
         background: #00FF2B;
+		background-color:" + if number(P1) < 0 then
+            "red"
+        end + "
         /* padding: 0.30rem 0.075rem; */
 	padding: 0.30rem 0.225rem 0.30rem 0rem;
     }
@@ -1094,6 +1097,7 @@ document.querySelectorAll('label[for]').forEach(label => {
 		</script>
 	</body>
 </html>
+
 
 
 
