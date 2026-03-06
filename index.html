@@ -303,14 +303,25 @@
 }
 
 /* .negative {
-   color: red; */
-}
+   color: red;
+}*/
 
-.negative-number {
+/* .negative-number {
   color: red;
  /* You can easily add more styles here later */
-}
-	  
+} */
+
+// 1. Select the element(s) containing your text
+const container = document.querySelector('.content-area');
+
+// 2. Define a Regex for negative numbers (e.g., -10 or -5.50)
+const negativeRegex = /(-\d+(\.\d+)?)/g;
+
+// 3. Replace the plain text with HTML spans
+container.innerHTML = container.innerHTML.replace(
+  negativeRegex, 
+  '<span class="negative-highlight">$1</span>'
+);
 	  
 </style>
 
@@ -1114,6 +1125,7 @@ document.querySelectorAll('label[for]').forEach(label => {
 		</script>
 	</body>
 </html>
+
 
 
 
